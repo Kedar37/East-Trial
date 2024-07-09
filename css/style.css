@@ -1,0 +1,223 @@
+@import url('https://fonts.cdnfonts.com/css/a-otf-shin-go-pro');
+
+*{
+    margin: 0;
+    padding: 0;
+    outline: none;
+    border: none;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    font-family: 'A-OTF Shin Go Pro', sans-serif;                                              
+}
+
+.container{
+    position: fixed;
+    width: 100vw;
+    height: 11rem;
+    background-image: url(/images/AdobeStock_829522655.jpeg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.nav{
+    position: relative;
+    width: 100%;
+    height: 8rem;
+    background-color: rgb(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 5rem;
+}
+
+.logo{
+    text-decoration: none;
+}
+
+.logo > img{
+    height: 5rem;
+    object-fit: cover;
+}
+
+nav{
+    margin-left: auto;
+}
+
+nav ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 1rem;
+}
+
+nav ul li{
+    list-style: none;
+    margin: 0 0.6rem;
+}
+
+nav ul li a{
+    text-decoration: none;
+    padding: 6px 15px;
+    color: white;
+    font-weight: 500;
+}
+
+nav ul li a:hover{
+    font-weight: 550;
+}
+
+.inquiry-btn{
+    text-decoration: none;
+}
+
+.inquiry-btn > button{
+    padding: 10px 20px;
+    background-color: #FF3600;
+    color: white;
+    font-size: 16px;
+    border-radius: 50px;
+    font-weight: 600;
+}
+
+
+.wrapper{
+    position: relative;
+    width: 100%;
+    padding: 0px 5rem;
+    height: 3rem;
+    background-color: rgb(255, 255, 255, 0.7);
+    display: flex;
+    align-items: center;
+  }
+  .drop-links{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+  .drop-links li{
+    list-style: none;
+  }
+  .drop-links > li > a{
+    color: #000000;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 500;
+    padding: 9px 15px;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    font-weight: 530;
+  }
+  .drop-links li a:hover{
+    background: #3A3B3C;
+    color: white;
+  }
+  .drop-links .mobile-item{
+    display: none;
+  }
+  .drop-links .drop-menu{
+    position: absolute;
+    background: #242526;
+    width: 180px;
+    line-height: 45px;
+    top: 85px;
+    opacity: 0;
+    visibility: hidden;
+    box-shadow: 0 6px 10px rgba(0,0,0,0.15);
+  }
+  .drop-links li:hover .drop-menu,
+  .drop-links li:hover .mega-box{
+    transition: all 0.3s ease;
+    top: 48px;
+    opacity: 1;
+    visibility: visible;
+  }
+  .drop-menu li a{
+    width: 100%;
+    display: block;
+    padding: 0 0 0 15px;
+    font-weight: 400;
+    border-radius: 0px;
+  }
+  .mega-box{
+    position: absolute;
+    width: 100%;
+    padding: 0 30px;
+    left: 0;
+    top: 0;
+    opacity: 0;
+    visibility: hidden;
+  }
+  .mega-box .content{
+    background: #242526;
+    padding: 25px;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    box-shadow: 0 6px 10px rgba(0,0,0,0.15);
+    height: 100%;
+  }
+  .mega-box .content .row{
+    width: calc(25% - 30px);
+    line-height: 45px;
+  }
+  .mega-box .content .row:nth-child(3){
+    width: calc(25% - 70px);
+    line-height: 45px;
+  }
+  .mega-box .content .row:nth-child(4){
+    width: calc(25% - 70px);
+    line-height: 45px;
+  }
+  .mega-box .content .row:nth-child(-n+2){
+    display: grid;
+    grid-template-columns: auto, 1fr;
+    gap: 10px;
+    text-decoration: none;
+  }
+
+  .mega-box .content .row > a:nth-child(-n+2){
+    text-decoration: none;
+    color: white;
+    font-size: 14px;
+  }
+  
+  .content .row img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .content .row header{
+    color: #f2f2f2;
+    font-size: 20px;
+    font-weight: 500;
+  }
+  .content .row .mega-links{
+    margin-left: -40px;
+    border-left: 1px solid rgba(255,255,255,0.09);
+  }
+  .row .mega-links li{
+    padding: 0 20px;
+  }
+  .row .mega-links > li > a{
+    padding: 0 20px;
+    color: #d9d9d9;
+    font-size: 14px;
+    display: block;
+    list-style: none;
+    text-decoration: none;
+  }
+  .row .mega-links li a:hover{
+    color: #f2f2f2;
+  }
+  .wrapper .btn{
+    color: #fff;
+    font-size: 20px;
+    cursor: pointer;
+    display: none;
+  }
+  .wrapper .btn.close-btn{
+    position: absolute;
+    right: 30px;
+    top: 10px;
+  }
