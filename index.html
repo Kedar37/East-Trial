@@ -12,7 +12,7 @@
     
     <link rel="canonical" href="https://www.eastcreative.com">
 
-    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/East-Trial/css/style.css">
     
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
@@ -45,7 +45,7 @@
     <header>
         <div class="container">
             <div class="nav">
-                <a href="#" class="logo"><img src="/images/eastlogo-01.png" alt="logo"></a>
+                <a href="#" class="logo"><img src="/East-Trial/images/eastlogo-01.png" alt="logo"></a>
                 <nav class="navbar">
                     <ul>
                         <li><a href="#">会社概要</a></li>
@@ -71,15 +71,15 @@
                   </li> -->
                   <li>
                     <a href="#" class="desktop-item">Product & Service</a>
-                    <label for="showMega" class="mobile-item">Product & Service</label>
+                    <!-- <label for="showMega" class="mobile-item">Product & Service</label> -->
                     <div class="mega-box">
                       <div class="content">
                         <div class="row">
-                          <img src="/images/Group.jpg" alt="">
+                          <img src="/East-Trial/images/Group.jpg" alt="">
                           <a href="#" class="service-link">Webデザイン / UI/UXデザイン</a>
                         </div>
                         <div class="row">
-                            <a href="#"><img src="/images/Group (1).jpg" alt=""></a> 
+                            <a href="#"><img src="/East-Trial/images/Group (1).jpg" alt=""></a> 
                             <a href="#" class="service-link">PowerCMS X</a>   
                         </div>
                         <div class="row">
@@ -105,15 +105,62 @@
                   <li><a href="#">Production Achievements</a></li>
                   <li><a href="#">Company Profile</a></li>
                 </ul>
-                <label for="menu-btn" class="btn menu-btn"><i class="fas fa-bars"></i></label>
+                <!-- <label for="menu-btn" class="btn menu-btn"><i class="fas fa-bars"></i></label> -->
               </div>
         </div>
     </header>
     <main>
-
+      <div class="slider-container">
+        <div class="slider">
+          <div class="slide active">
+            <img src="/East-Trial/images/AdobeStock_593708010.jpeg" alt="Slide 1">
+          </div>
+          <div class="slide">
+            <img src="/East-Trial/images/AdobeStock_593708010.jpeg" alt="Slide 2">
+          </div>
+          <div class="slide">
+            <img src="/East-Trial/images/AdobeStock_593708010.jpeg" alt="Slide 3">
+          </div>
+          <div class="slide">
+            <img src="/East-Trial/images/AdobeStock_593708010.jpeg" alt="Slide 4">
+          </div>
+        </div>
+        <div class="dots">
+          <span class="dot active"></span>
+          <span class="dot"></span>
+          <span class="dot"></span>
+          <span class="dot"></span>
+        </div>
+      </div>
     </main>
     <footer>
 
     </footer>
+
+    <script>
+      const slider = document.querySelector('.slider');
+const slides = document.querySelectorAll('.slide');
+const dots = document.querySelectorAll('.dot');
+let currentSlide = 0;
+
+function showSlide(n) {
+  slides[currentSlide].classList.remove('active');
+  dots[currentSlide].classList.remove('active');
+  currentSlide = (n + slides.length) % slides.length;
+  slides[currentSlide].classList.add('active');
+  dots[currentSlide].classList.add('active');
+  slider.style.transform = `translateX(-${currentSlide * 100}%)`;
+}
+
+function nextSlide() {
+  showSlide(currentSlide + 1);
+}
+
+setInterval(nextSlide, 2000);
+
+dots.forEach((dot, index) => {
+  dot.addEventListener('click', () => showSlide(index));
+});
+    </script>
 </body>
 </html>
