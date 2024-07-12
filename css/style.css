@@ -287,14 +287,14 @@ main {
 
 /* image slider styling */
 
-.slider-container {
+.banner-container {
   position: relative;
   max-width: 100%;
   height: 80vh;
   overflow: hidden;
 }
 
-.slider-container::after {
+.banner-container::after {
   content: '';
   position: absolute;
   bottom: 0;
@@ -305,20 +305,20 @@ main {
   pointer-events: none; 
 }
 
-.slider {
+.banner-slider {
   display: flex;
   transition: transform 0.5s ease-in-out;
   width: 100%;
   height: 70vh;
 }
 
-.slide {
+.banner {
   min-width: 100%;
   height: 100%;
   flex-shrink: 0;
 }
 
-.slide img {
+.banner img {
   width: 100%;
   height: 70vh;
   object-fit: cover;
@@ -414,7 +414,6 @@ main {
 
 .production-container{
   width: 100vw;
-  margin-bottom: 30px;
 }
 
 .title-n-shape{
@@ -457,14 +456,6 @@ main {
 	border-top: 100px solid #555;
   z-index: 1;
 }
-
-.clients-projects{
-  position: relative;
-  bottom: 100px;
-  height: 400px;
-  background-color: antiquewhite;
-}
-
 
 /* projects slider styling */
 
@@ -551,4 +542,325 @@ main {
 
 .right-arrow {
   right: 10px;
+}
+
+
+
+.clients-projects{
+  position: relative;
+  bottom: 100px;
+  width: 100%;
+  height: 500px;
+  background-color: antiquewhite;
+}
+
+.clients-content{
+  position: relative;
+  display: flex;
+  justify-content: space-evenly;
+  height: 100%;
+  overflow-y: scroll;
+}
+
+.client-column pre{
+  margin-top: 70px;
+  width: 500px;
+}
+
+.blur-shape{
+  position: relative;
+  background-image: linear-gradient(to bottom, transparent, #ffffff);
+  height: 150px;
+  bottom: 150px;
+  width: 100%;
+}
+
+
+/* logo-slider */
+
+#container {
+	display: grid;
+	padding: 30px 0;
+  background-color: #5F5F5F;
+}
+
+#slider-container {
+	height: auto;
+	width: 100%;
+	max-width: 100vw;
+	position: relative;
+	overflow: hidden;
+}
+
+#slider-container .btn {
+	position: absolute;
+	top: calc(50% - 10px);
+	height: 30px;
+	width: 30px;
+	border-left: 8px solid #ffffff;
+	border-top: 8px solid #ffffff;
+	cursor: pointer;
+}
+
+#slider-container .btn:hover {
+	transform: scale(1.2);
+}
+
+#slider-container .btn.inactive {
+	border-color: rgb(255, 255, 255, 0.5)
+}
+
+#slider-container .btn:first-of-type {
+	transform: rotate(-45deg);
+	left: 5%;
+}
+
+#slider-container .btn:last-of-type {
+	transform: rotate(135deg);
+	right: 5%;
+}
+
+#slider-container #slider {
+	display: flex;
+	width: 1000%;
+	height: 100%;
+	transition: all .5s;
+}
+
+#slider-container #slider .slide {
+	margin: auto 10px;
+	/* background-color: #b5b5b5; */
+	/* border-radius: 5px; */
+	/* box-shadow: 2px 2px 4px 2px white, -2px -2px 4px 2px white; */
+	display: grid;
+	place-items: center;
+}
+
+/* #slider-container #slider .slide span {
+	color: white;
+	font-size: 60px;
+}
+
+.slide{
+  width: 150px;
+  height: 150px;
+} */
+
+#slider-container #slider .slide img {
+  height: 300px;
+	object-fit: cover;
+}
+
+@media only screen and (min-width: 1100px) {
+	#slider-container #slider .slide {
+		width: calc(2.5% - 20px);
+	}
+}
+
+@media only screen and (max-width: 1100px) {
+	#slider-container #slider .slide {
+		width: calc(3.3333333% - 20px);
+	}
+}
+
+@media only screen and (max-width: 900px) {
+	#slider-container #slider .slide {
+		width: calc(5% - 20px);
+	}
+}
+
+@media only screen and (max-width: 550px) {
+	#slider-container #slider .slide {
+		width: calc(10% - 20px);
+	}
+}
+
+
+/* news section style */
+
+.news{
+  padding: 2rem 5rem;
+}
+
+.news-title{
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.news-head{
+  font-size: 2rem;
+}
+
+.more-btn{
+  width: 200px;
+    margin-top: auto;
+    outline: none;
+    padding: 10px;
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    background-color: rgb(213, 36, 80);
+    border: 1px solid rgb(255, 255, 255);
+    text-align: center;
+}
+
+.news-content{
+  margin-top: 2rem;
+  padding-left: 3rem;
+}
+
+
+.news-content ul li{
+  list-style: none;
+  margin: 10px 0;
+}
+
+
+/* media coverage style */
+
+.media-coverage{
+  width: 100vw;
+  padding: 2rem 5rem;
+}
+
+.media-title{
+  font-size: 2rem;
+}
+
+.media-content{
+  margin-top: 2rem;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+pre{
+  line-height: 30px;
+}
+
+/* neko */
+
+.neko img{
+  margin-left: 75%;
+}
+
+
+/* gray-shape */
+
+.gray-shape{
+  width: 100%;
+  height: 60px;
+  background-color: #444444;
+}
+
+.footer-img img{
+  width: 100%;
+  height: 60px;
+  object-fit: cover;
+}
+
+
+
+/* footer styling */
+
+footer{
+  width: 100vw;
+  background-color: #444444;
+}
+
+.footer-content{
+  display: flex;
+  justify-content: space-evenly;
+  padding: 1.5rem 0;
+}
+
+.company-logos{
+  display: flex;
+  flex-direction: column;
+}
+
+.company-logos > .second-logo{
+  display: flex;
+  gap: 30px;
+  margin-top: auto;
+}
+
+.eastlogo{
+  width: 120px;
+  object-fit: cover;
+}
+
+.column-two{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  color: #ffffff;
+}
+
+.column-two > a{
+  text-decoration: none;
+  color: #ffffff;
+}
+
+.column-three{
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  color: #ffffff;
+}
+
+.column-three > .row{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.column-three > .row > a{
+  text-decoration: none;
+  color: #ffffff;
+}
+
+.divider{
+  width: 2px;
+  height: 100%;
+  background-color: #ffffff;
+}
+
+.column-four{
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  color: #ffffff;
+}
+
+.car-logo{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.carlogo{
+  height: 58px;
+  object-fit: contain;
+}
+
+.byakkologo{
+  height: 87px;
+  object-fit: contain;
+}
+
+.oge-logo{
+  height: 68px;
+  object-fit: contain;
+}
+
+.copyright{
+  width: 100vw;
+  background-color: #000000;
+  height: 50px;
+  padding: 10px 5rem;
+  display: flex;
+  justify-content: space-between;
+  color: #ffffff;
+  align-items: center;
+  font-size: 10px;
 }
