@@ -8,7 +8,23 @@
   border: none;
   box-sizing: border-box;
   scroll-behavior: smooth;
-  font-family: 'A-OTF Shin Go Pro', sans-serif;                        
+  font-family: 'A-OTF Shin Go Pro', sans-serif;    
+  
+  ::-webkit-scrollbar{
+    width: 10px;
+    height: 10px;
+  }
+  
+  /* Track (the area where the scrollbar runs) */
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1; /* color of the track */
+  }
+  
+  /* Handle (the draggable part of the scrollbar) */
+  ::-webkit-scrollbar-thumb {
+    background-color: #888; /* color of the handle */
+    border-radius: 5px; /* roundness of the corners */
+  }
 }
 
 .container{
@@ -63,6 +79,7 @@ nav ul li a{
   padding: 6px 15px;
   color: white;
   font-weight: 500;
+  transition: all 0.2s ease;
 }
 
 nav ul li a:hover{
@@ -80,6 +97,28 @@ nav ul li a:hover{
   font-size: 16px;
   border-radius: 50px;
   font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.inquiry-btn > button:hover{
+  background-color: #c43710;
+}
+
+@media screen and (min-width: 1920px){
+  nav ul li{
+    font-size: 1.2rem;
+  }
+}
+
+@media screen and (min-width: 2560px){
+  nav ul li{
+    font-size: 1.4rem;
+  }
+
+  .inquiry-btn > button{
+    padding: 10px 25px;
+    font-size: 1.4rem;
+  }
 }
 
 
@@ -146,6 +185,30 @@ nav ul li a:hover{
   padding: 0 0 0 15px;
   font-weight: 400;
   border-radius: 0px;
+}
+
+@media screen and (min-width: 1920px){
+  .drop-links > li > a{
+    font-size: 1.3rem;
+  }
+}
+
+@media screen and (min-width: 2560px){
+  .drop-links > li > a{
+    font-size: 1.5rem;
+  }
+
+  .service-link{
+    font-size: 1.5rem;
+  }
+
+  .mega-box > .content > .row > a{
+    font-size: 2rem;
+  }
+
+  .mega-links > li{
+    font-size: 2rem;
+  }
 }
 
 /* first mega box */
@@ -289,8 +352,9 @@ main {
 
 .banner-container {
   position: relative;
-  max-width: 100%;
-  height: 80vh;
+  width: 100%;
+  height: 76vh;
+  max-height: 80vh;
   overflow: hidden;
 }
 
@@ -328,7 +392,7 @@ main {
   position: absolute;
   left: 6%;
   z-index: 1;
-  margin-top: 30px;
+  margin-top: 2rem;
 }
 
 .dot {
@@ -345,11 +409,23 @@ main {
   background-color: #717171;
 }
 
+@media screen and (min-width: 2560px) {
+  .dot{
+    height: 25px;
+    width: 25px;
+    margin: 0 20px;
+  }
+
+  .dots {
+    margin-top: 2.5rem;
+  }
+}
+
 
 /* about container styling */
 
 .about-container{
-  width: 100vw;
+  width: 100%;
   padding: 0 5rem;
   margin: 30px 0;
   gap: 30px;
@@ -384,8 +460,7 @@ main {
 }
 
 .para-container{
-  display: flex;
-  justify-content: space-between;
+  width: 100%;
   margin: 30px 0;
 }
 
@@ -396,6 +471,10 @@ main {
   margin-bottom: 30px;                       
 }
 
+.second{
+  display: flex;
+}
+
 .second-para{
   line-height: 2rem;
   font-size: 1rem;
@@ -403,17 +482,93 @@ main {
   margin-bottom: 30px;                       
 }
 
-.para-container > img{
-  margin-top: auto;
+.cupman-img{
+  margin-left: 20px;
   height: 250px;
   object-fit: cover;
+}
+
+@media screen and (min-width: 1920px){
+
+  .about-container{
+    padding: 0 8rem;
+  }
+
+  .first-para{
+    font-size: 1.2rem;
+    letter-spacing: 2px;
+    line-height: 2rem;
+    font-weight: 550;
+  }
+
+  .second-para{
+    font-size: 1.2rem;
+    letter-spacing: 2px;
+    line-height: 2rem;
+    font-weight: 550;
+  }
+  
+  .title {
+    font-size: 3rem;
+  }
+
+  .logos{
+    width: 400px;
+  }
+
+  .logos > img{
+    width: 400px;
+  }
+  
+  .ref-text{
+    width: 400px;
+    font-size: 1rem;
+  }
+}
+
+@media screen and (min-width: 2560px){
+  .about-container{
+    padding: 0 10rem;
+  }
+
+  .first-para{
+    font-size: 1.5rem;
+    letter-spacing: 2px;
+    line-height: 3rem;
+    font-weight: 550;
+  }
+
+  .second-para{
+    font-size: 1.5rem;
+    letter-spacing: 2px;
+    line-height: 3rem;
+    font-weight: 550;
+  }
+  
+  .title {
+    font-size: 4rem;
+  }
+
+  .logos{
+    width: 500px;
+  }
+
+  .logos > img{
+    width: 500px;
+  }
+  
+  .ref-text{
+    width: 500px;
+    font-size: 1rem;
+  }
 }
 
 
 /* production-achievements-section-styling */
 
 .production-container{
-  width: 100vw;
+  width: 100%;
+  max-width: 2560px;
 }
 
 .title-n-shape{
@@ -440,7 +595,7 @@ main {
   position: relative;
   width: 100%;
   padding: 20px;
-  height: 600px;
+  height: 700px;
   background-color: #221714;
   display: flex;
   justify-content: center;
@@ -483,6 +638,7 @@ main {
   display: flex;
   flex-direction: column;
   width: 300px;
+  max-width: 600px;
 }
 
 .project-title{
@@ -544,7 +700,104 @@ main {
   right: 10px;
 }
 
+@media screen and (min-width: 1920px) {
+  .projects-container{
+    height: 700px;
+  }
 
+  .production-title{
+    font-size: 3rem;
+  }
+
+  .project-title{
+    font-size: 1.5rem;
+  }
+
+  .link-btn{
+    font-size: 1.3rem;
+  }
+
+  .triangle-up {
+    margin-left: auto;
+    width: 0;
+    height: 0;
+    border-left: 1000px solid transparent;
+    border-right: 0px solid transparent;
+    border-bottom: 100px solid #5F5F5F;
+  }
+  
+  .triangle-down {
+    position: relative;
+    width: 0;
+    height: 0;
+    border-left: 0px solid transparent;
+    border-right: 1000px solid transparent;
+    border-top: 100px solid #555;
+    z-index: 1;
+  }
+}
+
+@media screen and (min-width: 2560px) {
+  .triangle-up{
+    border-left: 1200px solid transparent;
+    border-bottom: 150px solid #5F5F5F;
+  }
+
+  .triangle-down{
+    border-right: 1200px solid transparent;
+    border-top: 150px solid #5F5F5F;
+  }
+
+  .arrow{
+    padding: 25px;
+  }
+
+  .triangle-left {
+    width: 0;
+    height: 0;
+    margin-right: 5px;
+    border-top: 10px solid transparent;
+    border-right: 20px solid #ffffff;
+    border-bottom: 10px solid transparent;
+  }
+  
+  .triangle-right {
+    width: 0;
+    height: 0;
+    margin-left: 5px;
+    border-top: 10px solid transparent;
+    border-left: 20px solid #ffffff;
+    border-bottom: 10px solid transparent;
+  }
+
+  .production-title {
+    font-size: 4rem;
+  }
+
+  .projects-container {
+    height: 1000px;
+  }
+
+  .project-slide {
+    gap: 80px;
+  }
+
+  .project-content{
+    width: 500px;
+  }
+
+  .project-title {
+    font-size: 2rem;
+  }
+
+  .link-btn {
+    font-size: 1.8rem;
+    padding: 20px;
+  }
+}
+
+
+/* clients list */
 
 .clients-projects{
   position: relative;
@@ -560,11 +813,11 @@ main {
   justify-content: space-evenly;
   height: 100%;
   overflow-y: scroll;
+  padding: 1rem 0;
 }
 
 .client-column pre{
   margin-top: 70px;
-  width: 500px;
 }
 
 .blur-shape{
@@ -575,6 +828,25 @@ main {
   width: 100%;
 }
 
+@media screen and (min-width: 2560px){
+
+  .clients-projects{
+    position: relative;
+    bottom: 150px;
+    height: 700px;
+  }
+  
+  .client-column pre{
+    margin-top: 120px;
+    font-size: 1.5rem;
+    line-height: 1.8;
+  }
+  
+  .clients-content{
+    padding: 2rem 0;
+  }
+
+}
 
 /* logo-slider */
 
@@ -649,6 +921,27 @@ main {
 #slider-container #slider .slide img {
   height: 300px;
 	object-fit: cover;
+  max-width: 100%;
+}
+
+@media only screen and (min-width: 2560px) {
+  #slider-container #slider .slide img {
+      height: auto; /* Allow height to adjust proportionally */
+      max-height: 400px; /* Set a maximum height for larger screens */
+  }
+}
+
+@media only screen and (min-width: 2560px) {
+  #slider-container #slider .slide {
+      width: calc(2% - 20px);
+  }
+}
+
+/* Update the 1100px media query to handle up to 2559px */
+@media only screen and (min-width: 1100px) and (max-width: 2559px) {
+  #slider-container #slider .slide {
+      width: calc(2.5% - 20px);
+  }
 }
 
 @media only screen and (min-width: 1100px) {
@@ -679,6 +972,7 @@ main {
 /* news section style */
 
 .news{
+  width: 100%;
   padding: 2rem 5rem;
 }
 
@@ -694,7 +988,6 @@ main {
 
 .more-btn{
   width: 200px;
-    margin-top: auto;
     outline: none;
     padding: 10px;
     text-decoration: none;
@@ -715,11 +1008,31 @@ main {
   margin: 10px 0;
 }
 
+@media screen and (min-width: 1920px){
+
+  .news{
+    padding: 3rem 10rem;
+  }
+
+  .news-head{
+    font-size: 3rem;
+  }
+
+  .more-btn{
+    font-size: 1.5rem;
+  }
+  
+  .news-content ul li{
+    font-size: 1.5rem;
+    font-weight: 550;
+  }
+}
+
 
 /* media coverage style */
 
 .media-coverage{
-  width: 100vw;
+  width: 100%;
   padding: 2rem 5rem;
 }
 
@@ -737,12 +1050,113 @@ pre{
   line-height: 30px;
 }
 
-/* neko */
-
-.neko img{
-  margin-left: 75%;
+.media-content-big{
+  display: none;
 }
 
+.media-content-big > .media-column{
+  display: none;
+}
+
+
+@media screen and (min-width: 1920px){
+  .media-coverage{
+    padding: 3rem 10rem;
+  }
+  
+  .media-title{
+    font-size: 3rem;
+  }
+  
+  pre{
+    font-size: 1.2rem;
+    font-weight: 550;
+    line-height: 30px;
+  }
+}
+
+@media screen and (min-width: 2560px){
+  .media-content{
+    display: none;
+  }
+
+  .media-content-big{
+    display: block;
+    margin-top: 2rem;
+    display: flex;
+    justify-content: space-evenly;
+  }
+
+  .media-content-big > .media-column{
+    display: block;
+  }
+
+  .media-coverage{
+    padding: 3rem 10rem;
+  }
+  
+  .media-title{
+    font-size: 3rem;
+  }
+  
+  pre{
+    font-size: 1.2rem;
+    font-weight: 550;
+    line-height: 30px;
+  }
+}
+
+
+/* neko */
+
+.neko-btn {
+  margin-left: 75%;
+  width: 300px;
+  background-color: #ffd4d5;
+  padding: 15px;
+  border-radius: 10px 10px 0 10px;
+  position: fixed;
+  z-index: 1000;
+  display: none;
+}
+
+.inquiry-link{
+  text-decoration: none;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.inquiry-link > p{
+  color: #FF3600;
+  font-size: 1.4rem;
+  font-weight: 550;
+}
+
+.inquiry-link > img{
+  height: 100px;
+  object-fit: cover;
+}
+
+@media screen and (min-width: 1920px){
+  .inquiry-link > img{
+    height: 120px;
+    object-fit: cover;
+  }
+}
+
+@media screen and (min-width: 2560px){
+
+  .neko-btn{
+    width: 350px;
+    padding: 15px 25px;
+  }
+
+  .inquiry-link > img{
+    height: 130px;
+    object-fit: cover;
+  }
+}
 
 /* gray-shape */
 
@@ -764,12 +1178,13 @@ pre{
 
 footer{
   width: 100vw;
-  background-color: #444444;
 }
 
 .footer-content{
+  width: 100%;
   display: flex;
   justify-content: space-evenly;
+  background-color: #444444;
   padding: 1.5rem 0;
 }
 
@@ -820,8 +1235,7 @@ footer{
 }
 
 .divider{
-  width: 2px;
-  height: 100%;
+  width: 1px;
   background-color: #ffffff;
 }
 
@@ -849,6 +1263,7 @@ footer{
 }
 
 .oge-logo{
+  text-align: center;
   height: 68px;
   object-fit: contain;
 }
@@ -864,3 +1279,39 @@ footer{
   align-items: center;
   font-size: 10px;
 }
+
+
+@media screen and (min-width: 2560px) { 
+  .eastlogo{
+    width: 150px;
+    object-fit: cover;
+  }
+
+  .second-logo > img{
+    height: 70px;
+    object-fit: cover;
+  }
+
+  .column-two > a{
+    font-size: 1.2rem;
+  }
+  
+  .column-head{
+    font-size: 1.5rem;
+  }
+  
+  .column-three > .row > a{
+    font-size: 1.2rem;
+  }
+  
+  .column-four{
+    font-size: 1.2rem;
+  }
+
+  .copyright{
+    font-size: 0.8rem;
+  }
+}
+
+
+
