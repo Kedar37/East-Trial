@@ -13,6 +13,7 @@
     <link rel="canonical" href="https://www.eastcreative.com">
 
     <link rel="stylesheet" href="/East-Trial/css/style.css">
+    <link rel="stylesheet" href="/East-Trial/css/mobilestyle.css">
     
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
@@ -48,16 +49,66 @@
     <header>
         <div class="container">
             <div class="nav">
-                <a href="" class="logo"><img src="/East-Trial/images/eastlogo-01.png" alt="logo"></a>
-                <nav class="navbar">
-                    <ul>
-                        <li><a href="">会社概要</a></li>
-                        <li><a href="">制作実績</a></li>
-                        <li><a href="">掲載メディア</a></li>
-                        <li><a href="">採用情報</a></li>
-                    </ul>
-                </nav>
-                <a href="" class="inquiry-btn"><button>お問い合わせ・資料請求</button></a>
+              <div class="menu">
+                <div class="burger-menu" onclick="toggleMenu()">
+                  <div class="bar"></div>
+                  <div class="bar"></div>
+                  <div class="bar"></div>
+                </div>
+                <div class="dropdown-content" id="dropdown-content">
+                  <div class="dropdown">
+                    <span class="dropdown-header">+ Product & Service</span>
+                    <div class="dropdown-items">
+                      <a href="#">● Web制作の流れ</a>
+                      <a href="#">● Webデザイン/ UI・UX</a>
+                      <a href="#">● PowerCMS X</a>
+                      <a href="">● オープンソースCMS・EC</a>
+                      <a href="">● フルスクラッチ開発</a>
+                      <a href="">● Webマーケティング・広告管理</a>
+                      <a href="">● ユーザー・アクセシビリティ</a>
+                      <a href="">● 運用管理保守</a>
+                      <a href="">● サーバー構築・運用</a>
+                      <a href="">● LOGO制作/ その他媒体</a>
+                      <a href="">● 各種講習・AI研修・CISO訓練</a>
+                    </div>
+                  </div>
+                  <div class="dropdown">
+                    <span class="dropdown-header">+ Production Achievements</span>
+                    <div class="dropdown-items">
+                      <a href="#">Option 2.1</a>
+                      <a href="#">Option 2.2</a>
+                      <a href="#">Option 2.3</a>
+                    </div>
+                  </div>
+                  <div class="dropdown">
+                    <span class="dropdown-header">+ Job Offer</span>
+                    <div class="dropdown-items">
+                      <a href="#">Option 3.1</a>
+                      <a href="#">Option 3.2</a>
+                      <a href="#">Option 3.3</a>
+                    </div>
+                  </div>
+                  <div class="dropdown">
+                    <span class="dropdown-header">+ Company Profile</span>
+                    <div class="dropdown-items">
+                      <a href="#">Option 4.1</a>
+                      <a href="#">Option 4.2</a>
+                      <a href="#">Option 4.3</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <a href="" class="logo"><img src="/East-Trial/images/eastlogo-01.png" alt="logo"></a>
+              <a href="" class="blk-logo"><img src="/East-Trial/images/eastlogo2-01.png" alt="logo"></a>
+              <nav class="navbar">
+                <ul>
+                    <li><a href="">会社概要</a></li>
+                    <li><a href="">制作実績</a></li>
+                    <li><a href="">掲載メディア</a></li>
+                    <li><a href="">採用情報</a></li>
+                </ul>
+              </nav>
+              <a href="" class="inquiry-btn"><button>お問い合わせ・資料請求</button></a>
             </div>
             <div class="wrapper">
                 <ul class="drop-links">
@@ -174,10 +225,24 @@
         </div>
       </div>
 
+      <div class="banner-img">
+        <img class="main-img" src="/East-Trial/images/AdobeStock_593708010.jpeg" alt="">
+        <div class="mobile-bannerbot">
+          <h1 class="banner-text"></h1>
+          <div class="brown-shape">
+            <img src="/East-Trial/images/eastlogo3.png" alt="">
+            <p></p>
+          </div>
+          <div class="anab-logo">
+            <img src="/East-Trial/images/otherlogo-01.png" alt="">
+          </div>
+        </div>
+      </div>
+
       <section class="about-container">
         <div class="title-container">
-            <h1 class="title">大規模サイト600サイト超えの制作実績 <br>
-              Webデザイン・プランニング・システム開発・運用まで <br>
+            <h1 class="title">大規模サイト600サイト超えの制作実績
+              Webデザイン・プランニング・システム開発・運用まで
               圧倒的ノウハウで創造致します。
             </h1>
           <div class="logos">
@@ -198,7 +263,7 @@
               CMS構築・アプリ開発・サイト構築運営・コンテンツ運用管理、SEO/SEM等を行っています。
             </p>
             <div class="second">
-              <p class="second-para">大手企業様、TV放送局様、大手化粧品会社様、大手SI/SE企業様・大手キャリア様など国内 
+              <p class="second-para">大手企業様、TV放送局様、大手化粧品会社様、大手SI/SE企業様・大手キャリア様など国内
                 を代表する企業様から数多くのご依頼を頂いております。
                 Webサイトの規模が大きくなるほど制作難易度が非常に高くなります。長年のノウハウと
                 実績で最善のご提案を致します。
@@ -418,6 +483,100 @@
           <div class="blur-shape"></div>
         </div>
       </section>
+      <div class="mobile-production-container">
+        <h1>Production Achievements</h1>
+        <div class="production-wrapper">
+          <a href="" class="more-link">制作実績一覧</a>
+          <img class="client-project-img" src="/East-Trial/images/kentei_2022.png" alt="">
+          <p class="mobile-project-title">
+            東京商工会議所様 <br>
+            検定センター
+          </p>
+        </div>
+      </div>
+      <div class="mobile-clients-project">
+          <div class="mobile-clients-content">
+            <div class="mobile-client-column">
+              <span>
+                東京商工会議所　検定試験情報
+                株式会社ケアネット様
+                日本アロマ環境協会様 Webサイト
+                東京税理士協会組合様
+                東京書籍株式会社様
+                第一法規株式会社様　コーポレートサイト
+                第一法規株式会社様　ECサイト
+                アナ スイ ジャパン 株式会社様　ANNA SUI
+                株式会社 アルビオン様　レ・メルヴェイユーズ ラデュレ | Les 
+                Merveilleuses LADURÉE
+                株式会社 LIXIL様　LC ＜エルシィ＞
+                NTTファイナンス様　バイゾウTOWN 
+                株式会社プラザクリエイト様　ネットプリント
+                サツキ機材様
+                沖縄トラベルインフォ様
+                ホテルJALシティ長野様
+                Spinshell.TV様
+                伊藤忠商事様　未知倶楽部
+                株式会社アビステ様
+                株式会社プラザクリエイト　おもいで玉手箱
+                株式会社エーアンドティー様
+                株式会社アクティブ・ワーク様
+                株式会社レオパレス21様　マンガでわかる　レオパレス21
+                第一法規様　リクルートサイト
+                TO BEE（トゥービー）様
+                東京販売士協会様
+                東光ローンコンサルタント株式会社様
+                株式会社イマギイレ様
+                MRI 三菱総合研究所様　環境・エネルギー研究本部
+                NTTファイナンス様　NTTグループカード
+                NTTファイナンス様　My Link | NTTグループカード
+                ドコモサービス様
+                JALPAK様　販売店向けエクストラネット
+                日興コーディアル証券様　モバイルサイト
+                JTB様　ロングスティプラザ by JTB
+                リクルート様　つくるぶ
+                OCN様　 iPodプレゼントキャンペーンページ
+                株式会社ハイホー様　hi-hoストレスキャラ診断
+                株式会社ハイホー様　hi-hoしごと
+                Kインターナショナル様
+                東京商工会議所様　企業行動規範
+                MARRONNIERGATE様　Web管理システム
+                ホテルJALシティ長野様
+                東京商工会議所様　通信講座
+                株式会社イマギイレ様
+                東光ローンコンサルタント株式会社様
+                東京販売士協会様
+                FPS-net様　保険販売ノウハウ
+                株式会社ハイホー様　hi-hoお仕事コラム
+                株式会社オール・デマンド様　コスメティックサイト
+                ジニアス・ソノリティ株式会社様
+                0031Advent様　 国際電話
+                上野クリニック様
+                大手航空旅行会社様　Webサイト制作
+                株式会社バンダイ様　LALABitマーケット
+                NTT-ME様　JMSB
+                株式会社リアルポイント様　robitaブランドサイト
+                映画チケット用タッチパネルコンテンツ
+                株式会社ハイホー様　hi-hoキャンペーンサイト
+                株式会社オール・デマンド様 Webサイト
+                日本キックボクシング連盟様NJKFオフィシャル キックチャンネル
+                財団法人日本モーターサイクルスポーツ協会様
+                NTT-ME様　羽田空港ビックバード無線LANサイト
+                大手航空会社様　空港利用アプリ
+                株式会社ウェルシィ様
+                CAD CENTER様　Urban Viewer 　地図表示用アプリ
+                シースター株式会社様　SEASTAR ONLINE[オンラインショッピン
+                グサイト]
+                株式会社ハイホー様　hi-hoトラベル
+                株式会社ネット工房様
+                NTT-ME様　China Rose Cafe [ Croatia Festival ]
+                株式会社ハイホー様　hi-ho Books
+                NTT-BB様　BROBA MAGAbit LIVE COMMUNITY
+              </span>
+            </div>
+          </div>
+          <div class="mobile-blur-shape"></div>
+      </div>
+
       <div id="container">
         <div id="slider-container">
           <span onclick="slideRight()" class="btn"></span>
@@ -435,6 +594,21 @@
           <span onclick="slideLeft()" class="btn"></span>
         </div>
       </div>
+
+      <div class="mobile-logo-slider">
+        <div class="mobile-slider">
+          <div class="mobile-slide"><img src="/East-Trial/images/HImdPu.jpg" alt=""></div>
+          <div class="mobile-slide"><img src="/East-Trial/images/Group 190.jpg" alt=""></div>
+          <div class="mobile-slide"><img src="/East-Trial/images/TEcKXc.jpg" alt=""></div>
+          <div class="mobile-slide"><img src="/East-Trial/images/HImdPu.jpg" alt=""></div>
+          <div class="mobile-slide"><img src="/East-Trial/images/Group 190.jpg" alt=""></div>
+          <div class="mobile-slide"><img src="/East-Trial/images/TEcKXc.jpg" alt=""></div>
+          <div class="mobile-slide"><img src="/East-Trial/images/HImdPu.jpg" alt=""></div>
+          <div class="mobile-slide"><img src="/East-Trial/images/Group 190.jpg" alt=""></div>
+          <div class="mobile-slide"><img src="/East-Trial/images/TEcKXc.jpg" alt=""></div>
+        </div>
+      </div>
+
       <section class="news">
         <div class="news-title">
           <h1 class="news-head">NEWS</h1>
@@ -717,6 +891,24 @@
 
     </main>
     <footer>
+      <div class="mobile-footer-top">
+        <a href="">会社概要</a>
+        <a href="">制作実績</a>
+        <a href="">掲載メディア</a>
+        <a href="">採用情報</a>
+        <a href="">お問い合わせ/資料請求</a>
+      </div>
+      <div class="mobile-footer">
+        <img class="east-footer-logo" src="/East-Trial/images/eastlogo.png" alt="">
+        <div class="second-logo">
+          <img src="/East-Trial/images/Group44.png" alt="">
+          <img src="/East-Trial/images/Group-1.png" alt="">
+        </div>
+        <img src="/East-Trial/images/Group (2).png" alt="">
+        <img src="/East-Trial/images/Group (3).png" alt="">
+        <img src="/East-Trial/images/Group (4).png" alt="">
+      </div>
+
       <div class="footer-top">
         <div class="neko-btn" id="neko-button">
           <a href="" class="inquiry-link">
@@ -798,6 +990,20 @@
       </div>
     </footer>
     
+  <script>
+    function toggleMenu() {
+    var dropdownContent = document.getElementById("dropdown-content");
+    dropdownContent.style.display = dropdownContent.style.display === "block" ? "none" : "block";
+  }
+  
+  document.querySelectorAll('.dropdown-header').forEach(item => {
+    item.addEventListener('click', function() {
+      var dropdownItems = this.nextElementSibling;
+      dropdownItems.style.display = dropdownItems.style.display === "block" ? "none" : "block";
+    });
+  });
+  
+  </script>
 
   <script>
     // Function to toggle visibility and position of neko-btn based on scroll
