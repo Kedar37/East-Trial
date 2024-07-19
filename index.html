@@ -268,14 +268,14 @@
                 Webサイトの規模が大きくなるほど制作難易度が非常に高くなります。長年のノウハウと
                 実績で最善のご提案を致します。
               </p>
-              <img class="cupman-img" src="/East-Trial/images/cupman.png" alt="">
+              <img class="cupman-img" src="/East-Trial/images/cup.gif" alt="">
             </div>
         </div>
       </section>
 
       <section class="production-container">
         <div class="title-n-shape">
-          <h1 class="production-title">Production Achievements</h1>
+          <h1 class="production-title hidden">Production Achievements</h1>
           <div class="triangle-up"></div>
         </div>
         <div class="projects-container">
@@ -484,7 +484,7 @@
         </div>
       </section>
       <div class="mobile-production-container">
-        <h1>Production Achievements</h1>
+        <h1 class="hidden">Production Achievements</h1>
         <div class="production-wrapper">
           <a href="" class="more-link">制作実績一覧</a>
           <img class="client-project-img" src="/East-Trial/images/kentei_2022.png" alt="">
@@ -611,8 +611,8 @@
 
       <section class="news">
         <div class="news-title">
-          <h1 class="news-head">NEWS</h1>
-          <a href="" class="more-btn">MORE</a>
+          <h1 class="news-head hidden">NEWS</h1>
+          <a href="" class="more-btn hidden">MORE</a>
         </div>
         <div class="news-content">
           <ul>
@@ -624,7 +624,7 @@
         </div>
       </section>
       <section class="media-coverage">
-        <h1 class="media-title">Media Coverage</h1>
+        <h1 class="media-title hidden">Media Coverage</h1>
           <div class="media-content">
             <div class="media-column">
               <pre>
@@ -989,6 +989,22 @@
         <div></div>
       </div>
     </footer>
+
+    <script>
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          console.log(entry)
+          if (entry.isIntersecting) {
+            entry.target.classList.add('show');
+          } else {
+            entry.target.classList.remove('show')
+          }
+        })
+      })
+
+      const hiddenElements = document.querySelectorAll('.hidden');
+      hiddenElements.forEach((el) => observer.observe(el));
+    </script>
     
   <script>
     function toggleMenu() {
